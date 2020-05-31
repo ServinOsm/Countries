@@ -1,0 +1,37 @@
+@mixin calculateWidth($cards-per-row) {
+  .card {
+    width: calc(100% /#{$cards-per-row} - 2rem);
+  }
+}
+
+.card {
+  padding: 1rem;
+  border-radius: 5px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.26);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 10rem;
+  text-decoration: none;
+  cursor: pointer;
+  box-sizing: border-box;
+  text-align: center;
+  margin: 10px;
+  color: inherit;
+  border: 1px solid #007eda;
+  &:hover {
+    background-color: rgba(0, 126, 219, 0.08);
+  }
+}
+
+@media screen and (max-width: 40.9rem) {
+  @include calculateWidth($cards-per-row: 1);
+}
+
+@media screen and (min-width: 41rem) {
+  @include calculateWidth($cards-per-row: 2);
+}
+
+@media screen and (min-width: 64rem) {
+  @include calculateWidth($cards-per-row: 3);
+}

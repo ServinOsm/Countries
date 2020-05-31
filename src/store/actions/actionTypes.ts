@@ -1,0 +1,8 @@
+export const LOAD_REGIONS = "LOAD_REGIONS";
+export const SET_REGIONS = "SET_REGIONS";
+export const LOAD_COUNTRIES = "LOAD_COUNTRIES";
+export const SET_COUNTRIES = "SET_COUNTRIES";
+export const LOAD_COUNTRY = "LOAD_COUNTRY";
+export const SET_COUNTRY = "SET_COUNTRY";
+export const START_FETCHING = "START_FETCHING";
+export const STOP_FETCHING = "STOP_FETCHING";

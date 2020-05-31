@@ -1,0 +1,17 @@
+.countriesArea {
+  display: flex;
+  justify-content: center;
+  .table {
+    width: 80%;
+  }
+}
+
+@media screen and (max-width: 40rem) {
+  .countriesArea {
+    flex-direction: column;
+    align-items: center;
+    .table {
+      width: 100%;
+    }
+  }
+}

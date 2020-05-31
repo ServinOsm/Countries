@@ -1,0 +1,57 @@
+.countryArea {
+  height: 100%;
+  width: 100%;
+  .countryDataArea {
+    display: flex;
+    justify-content: space-between;
+    margin: 2rem;
+    .flag {
+      flex-shrink: 0;
+      width: 48%;
+      min-width: 20rem;
+      margin: auto;
+      .flagImage {
+        width: 100%;
+      }
+    }
+    .countryInfo {
+      width: 100%;
+      padding: 0 2rem;
+      .header {
+        margin-left: 0.4rem;
+      }
+      .generalCountryInfo {
+        .info {
+          .list {
+            display: flex;
+            flex-direction: column;
+            list-style-type: none;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.26);
+            padding: 0.6rem;
+            width: 100%;
+            margin: 0.5rem;
+            box-sizing: border-box;
+            .listItem {
+              margin: 0.5rem 0.5rem 0.5rem 0;
+              font-family: "Nunito Sans", sans-serif;
+              .itemHeader {
+                font-weight: bold;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 60rem) {
+  .countryArea {
+    .countryDataArea {
+      flex-direction: column;
+      .countryInfo {
+        padding: 0;
+      }
+    }
+  }
+}

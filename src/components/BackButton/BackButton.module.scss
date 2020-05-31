@@ -1,0 +1,25 @@
+.backButton {
+  background-color: rgb(255, 255, 255);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.26);
+  border: none;
+  padding: 0.5rem 0.75rem;
+  color: black;
+  align-items: center;
+  margin: 1rem;
+  text-decoration: none;
+  cursor: pointer;
+  display: inline-block;
+  max-height: 1.2rem;
+  max-width: 5rem;
+  &:focus {
+    outline: none;
+  }
+  .backButtonArrow {
+    transform: rotateY(180deg);
+    padding-left: 0.2rem;
+    height: 0.8rem;
+    g {
+      fill: black;
+    }
+  }
+}

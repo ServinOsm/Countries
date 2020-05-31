@@ -1,24 +1,31 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+// Vendor imports
+import React, { Suspense } from "react";
+import { Switch, Route, Redirect } from "react-router-dom";
+// Imports
+import RegionsContainer from "./containers/RegionsContainer";
+import CountriesContainer from "./containers/CountriesContainer";
+import CountryContainer from "./containers/CountryContainer";
+import Spinner from "./components/Spinner/Spinner";
+// Style imports
+import styles from "./App.module.scss";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className={styles.app}>
+      <Suspense fallback={<Spinner />}>
+        <Switch>
+          <Route
+            path="/regions/:regionName/:countryName"
+            render={() => <CountryContainer />}
+          />
+          <Route
+            path="/regions/:regionName/"
+            render={() => <CountriesContainer />}
+          />
+          <Route path="/regions" render={() => <RegionsContainer />} />
+          <Redirect to="/regions" />
+        </Switch>
+      </Suspense>
     </div>
   );
 }
